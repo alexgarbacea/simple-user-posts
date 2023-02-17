@@ -1,0 +1,51 @@
+@use 'base'
+    
+.users-wrapper 
+    width: 80%
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    flex-wrap: wrap
+    gap: 1em
+
+.user-card
+    animation: .3s ease-in-out both enter
+    display: flex
+    flex-direction: row
+    gap: 20px
+    flex: 35%
+    background-color: base.$BodyColorSecond
+    padding: 1em
+    height: 150px
+    border-radius: .3rem
+    &>*
+        user-select: all
+    &>*:first-child
+        // max-width: 50%
+
+.post-view
+    overflow: auto
+    font-size: small
+
+.single-post
+    background-color: base.$BodyColorMain
+    &>h3
+        margin-bottom: 0
+    &>p
+        margin-top: 0
+
+// animations
+
+@for $i from 1 through 10
+  .user-card
+    &:nth-child(#{$i})
+      animation-delay: $i * (.03s)
+    
+@keyframes enter 
+  from
+    opacity: 0
+    transform: scale(0)
+  to
+    opacity: 1
+    transform: scale(1)

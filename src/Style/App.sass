@@ -1,0 +1,50 @@
+@use 'base'
+
+body 
+    margin: 0
+    padding: 0
+    background-color: base.$BodyColorMain
+
+.App
+    margin-block: 1em
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 1em
+
+.button 
+    @include base.button
+    background-color: base.$ContrastColorMain
+    padding-block: .7em
+    width: 150px
+    text-align: center
+    color: base.$TextColorSecond
+    border-radius: .3rem
+    transition: .2s ease-in-out
+    &:hover
+        transform: translateY(-2px)
+
+.link-button 
+    @include base.button
+    color: base.$ContrastColorMain
+
+// loader
+.loader 
+    width: 35px
+    height: 35px
+    border: 5px solid base.$ContrastColorMain
+    border-bottom-color: transparent
+    border-radius: 50%
+    display: inline-block
+    box-sizing: border-box
+    animation: rotation 1s linear infinite
+
+@keyframes rotation 
+    0% 
+        transform: rotate(0deg)
+    100% 
+        transform: rotate(360deg)
+    
+
+
+

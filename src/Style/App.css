@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ededed;
+}
+
+.App {
+  margin-block: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.button {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+  cursor: pointer;
+  background-color: #0879FA;
+  padding-block: 0.7em;
+  width: 150px;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 0.3rem;
+  transition: 0.2s ease-in-out;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.link-button {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+  cursor: pointer;
+  color: #0879FA;
+}
+
+.loader {
+  width: 35px;
+  height: 35px;
+  border: 5px solid #0879FA;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=App.css.map */
